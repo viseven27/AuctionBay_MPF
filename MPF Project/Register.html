@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AuctionBay</title>
+  <style>
+    .container {
+      background-color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-image: url("https://cdn.builder.io/api/v1/image/assets%2Ffb64acecb7014d04ac0f55f88e7916d3%2F825407b46e89455c8bdec87f14e2c505");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      box-shadow: 0 0 0 1000px rgba(255, 255, 255, 0.6) inset;
+      padding: 68px 60px;
+    }
+
+    @media (max-width: 991px) {
+      .container {
+        padding: 0 20px;
+      }
+    }
+
+    .main-content {
+      display: flex;
+      margin-top: 59px;
+      width: 763px;
+      max-width: 100%;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    @media (max-width: 991px) {
+      .main-content {
+        margin-top: 40px;
+      }
+    }
+
+    .auth-section {
+      border-radius: 10px;
+      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.5);
+      background-color: #fff;
+      align-self: stretch;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-size: 16px;
+      color: #707070;
+      font-weight: 400;
+      line-height: 169%;
+      padding: 67px 60px 31px;
+    }
+
+    @media (max-width: 991px) {
+      .auth-section {
+        max-width: 100%;
+        padding: 0 20px;
+      }
+    }
+
+    .form-header {
+      display: flex;
+      width: 500px;
+      max-width: 100%;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .logo {
+      font: 35px / 40.5px Allerta Stencil, -apple-system, Roboto, Helvetica, sans-serif;
+      color: #a18a68;
+    }
+
+    .logo span {
+      color: #000;
+    }
+
+    .button-group {
+      display: flex;
+      align-items: start;
+      gap: 14px;
+      font-size: 20px;
+      color: #000;
+      padding: 5px 7px;
+      margin-top: 40px;
+      background-color: #efefef;
+      border-radius: 8px;
+    }
+
+    .button {
+      padding: 16px 60px;
+      background-color: #efefef;
+      border-radius: 8px;
+      font-family: Domine, sans-serif;
+      cursor: pointer;
+    }
+
+    .button.secondary {
+      margin-left: 46px;
+      background-color: #fff;
+      box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.1);
+    }
+
+    .input-label {
+      font-family: Domine, sans-serif;
+      margin-top: 20px;
+      align-self: flex-start;
+    }
+
+    .input {
+      background-color: #d8d8d8;
+      display: flex;
+      align-items: center;
+      padding: 10px;
+      border-radius: 5px;
+      margin-top: 10px;
+      width: 100%;
+    }
+
+    .error {
+      color: red;
+      font-size: 14px;
+      margin-top: 5px;
+      display: none;
+    }
+
+    .password-field {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .password-text {
+      font-family: Domine, sans-serif;
+    }
+
+    .img-icon {
+      aspect-ratio: 1.47;
+      object-fit: auto;
+      width: 25px;
+      fill: #8d8c8c;
+    }
+
+    .terms {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 24px;
+      color: #000;
+      line-height: 27px;
+    }
+
+    .terms img {
+      width: 16px;
+      aspect-ratio: 1;
+      cursor: pointer;
+    }
+
+    .register-button {
+      display: flex;
+      position: relative;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      padding: 21px 60px;
+      background-color: #000;
+      color: #fff;
+      font-family: Domine, sans-serif;
+      font-weight: 700;
+      margin-top: 28px;
+      cursor: pointer;
+    }
+
+    .register-button img {
+      position: absolute;
+      inset: 0;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      background-color: #000;
+    }
+
+    .social-login {
+      display: flex;
+      gap: 20px;
+      margin-top: 31px;
+      width: 323px;
+      max-width: 100%;
+    }
+
+    .social-login div {
+      flex-grow: 1;
+      font-family: Domine, sans-serif;
+      text-decoration: underline;
+    }
+
+    footer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 30px 0;
+    }
+
+    .footer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 181px;
+      max-width: 100%;
+      aspect-ratio: 8.23;
+      margin-top: 57px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .footer img {
+      position: absolute;
+      inset: 0;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    footer p {
+      font: 400 16px / 169% Domine, sans-serif;
+      color: #000;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="main-content">
+      <section class="auth-section">
+        <div class="form-header">
+          <div class="logo">
+            Auction <span>Bay</span>
+          </div>
+          <div class="button-group">
+            <button class="button" onclick="handleLogin()">Log in</button>
+            <button class="button secondary" onclick="handleRegister()">Register</button>
+          </div>
+          <form onsubmit="return handleRegisterSubmit(event)">
+            <label class="input-label" for="username">Username</label>
+            <div class="input">
+              <input type="text" id="username" name="username" placeholder="Enter Username" />
+            </div>
+            <div class="error" id="username-error">Username is required</div>
+            <label class="input-label" for="email">Email</label>
+            <div class="input">
+              <input type="email" id="email" name="email" placeholder="Enter Email" />
+            </div>
+            <div class="error" id="email-error">Valid email is required</div>
+            <label class="input-label" for="password">Password</label>
+            <div class="input password-field">
+              <input type="password" id="password" name="password" placeholder="Enter Password" />
+            </div>
+            <div class="error" id="password-error">Password is required</div>
+            <label class="input-label" for="confirm-password">Confirm Password</label>
+            <div class="input password-field">
+              <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm Password" />
+            </div>
+            <div class="error" id="confirm-password-error">Password does not match</div>
+            <div class="terms">
+              <input type="checkbox" id="terms-checkbox" />
+              <label for="terms-checkbox">
+                <span>Accept</span> <span>Terms and Conditions</span>
+              </label>
+            </div>
+            <div class="error" id="terms-error">You must accept the terms and conditions</div>
+            <div class="register-button" onclick="handleRegisterSubmit(event)">REGISTER</div>
+          </form>
+          <div class="social-login">
+            <div>Register with Google</div>
+            <div>Register with Facebook</div>
+          </div>
+        </div>
+      </section>
+      <footer>
+        <div class="footer">
+          <img
+            src="https://cdn.builder.io/api/v1/image/assets/TEMP/30275919bd03b8b62c5430f9698fb353eb5cdf9fa37b81b8b798a14a782070ab?apiKey=fb64acecb7014d04ac0f55f88e7916d3&"
+            alt="" />
+          <div>
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets/TEMP/30275919bd03b8b62c5430f9698fb353eb5cdf9fa37b81b8b798a14a782070ab?apiKey=fb64acecb7014d04ac0f55f88e7916d3&"
+              alt="" />
+            <div>
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets/TEMP/30275919bd03b8b62c5430f9698fb353eb5cdf9fa37b81b8b798a14a782070ab?apiKey=fb64acecb7014d04ac0f55f88e7916d3&"
+                alt="" />
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets/TEMP/30275919bd03b8b62c5430f9698fb353eb5cdf9fa37b81b8b798a14a782070ab?apiKey=fb64acecb7014d04ac0f55f88e7916d3&"
+                alt="" />
+            </div>
+          </div>
+        </div>
+        <p>Copyright © 2024 AuctionBay All rights reserved.</p>
+      </footer>
+    </div>
+  </div>
+  <script>
+    function handleLogin() {
+      window.location.href = 'Login.html';
+    }
+
+
+    function handleRegisterSubmit(event) {
+      event.preventDefault();
+      const username = document.getElementById('username').value;
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+      const confirmPassword = document.getElementById('confirm-password').value;
+      const termsAccepted = document.getElementById('terms-checkbox').checked;
+      let hasError = false;
+
+      if (!username) {
+        document.getElementById('username-error').style.display = 'block';
+        hasError = true;
+      } else {
+        document.getElementById('username-error').style.display = 'none';
+      }
+
+      if (!email || !validateEmail(email)) {
+        document.getElementById('email-error').style.display = 'block';
+        hasError = true;
+      } else {
+        document.getElementById('email-error').style.display = 'none';
+      }
+
+      if (!password) {
+        document.getElementById('password-error').style.display = 'block';
+        hasError = true;
+      } else {
+        document.getElementById('password-error').style.display = 'none';
+      }
+
+      if (password !== confirmPassword) {
+        document.getElementById('confirm-password-error').style.display = 'block';
+        hasError = true;
+      } else {
+        document.getElementById('confirm-password-error').style.display = 'none';
+      }
+
+      if (!termsAccepted) {
+        document.getElementById('terms-error').style.display = 'block';
+        hasError = true;
+      } else {
+        document.getElementById('terms-error').style.display = 'none';
+      }
+
+      if (!hasError) {
+        alert(`Registered with Username: ${username}, Email: ${email}`);
+      }
+    }
+
+    function validateEmail(email) {
+      const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      return re.test(String(email).toLowerCase());
+    }
+  </script>
+</body>
+
+</html>

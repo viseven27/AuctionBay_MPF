@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transaction Page - AuctionBay</title>
+    <link rel="stylesheet" href="trans-styles.css">
+</head>
+
+<body>
+    <div id="box1"></div>
+    <div id="rectangle-2"></div>
+    <header>
+        <div class="logo"><a href="Home.html">
+                <img class="logo" src="LogoAuctionBay.png" alt="Logo">
+            </a>
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search in AuctionBay">
+        </div>
+        <div class="nav-icons">
+            <a href="shoppingCart.html">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 16 16">
+                    <path fill="Black"
+                        d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607L1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l1.313 7h8.17l1.313-7zM5 12a2 2 0 1 0 0 4a2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4a2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2a1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2a1 1 0 0 1 0-2" />
+                </svg>
+            </a>
+            <a href="Login.html">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <g fill="none" stroke="Black" stroke-width="2">
+                        <path stroke-linejoin="round"
+                            d="M4 18a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z" />
+                        <circle cx="12" cy="7" r="3" />
+                    </g>
+                </svg>
+            </a>
+            <!-- <img src="/assets/shopping-cart.png" alt="Shopping Cart">
+            <img src="/assets/user.png" alt="User"> -->
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <section class="shipping">
+                <div class="address section-box">
+                    <h3 style="color: gray;">Address</h3>
+                    <h5>Rhama Abdul Rojak</h5>
+                    <p style="font-size: 12px;">Frieren’s Enchanted Garden 123 Elven Glade, Eternal Forest Province of
+                        Elfenheim, FJ 1001</p>
+                    <button class="change-btn">Change</button>
+                </div>
+                <div class="order section-box">
+                    <h3 style="color: gray;">Order</h3>
+                    <div class="order-item">
+                        <img src="assets\Img\drift_tengoku_main.webp" alt="Majalah impor DRIFT TENGOKU FEBRUARY 2019">
+                        <div class="details">
+                            <h5>Majalah impor DRIFT TENGOKU FEBRUARY 2019</h5>
+                            <h4>
+                                <span style="color: gray;">#16278182169</span>
+                                <span> = 2 x Rp330.000,00</span>
+                            </h4>
+                            <p>28</p>
+                        </div>
+                    </div>
+                    <div class="order-item">
+                        <img src="gadget2.png" alt="Novel Grapes of Wrath">
+                        <div class="details">
+                            <h5>Eco Display</h5>
+                            <h4>
+                                <span style="color: gray;">#162781282117</span>
+                                <span> = 1 x Rp200.000,00</span>
+                            </h4>
+                            <p>420</p>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="shipping-method section-box">
+                    <h4 style="color: gray;">Shipping Method</h4>
+                    <h3>
+                        <span>Regular</span>
+                        <span>Rp8.000</span>
+                    </h3>
+                    <p>Estimated Arrival May 30-31, 2024</p>
+                </div>
+                <div class="payment-method section-box">
+                    <h3 style="color: gray;">Payment Method</h3>
+                    <div class="payment-options">
+                        <button class="payment-btn active" data-method="credit-debit">
+                            <img src="credit-card.jpeg" alt="Credit Card"> Credit Card / Debit Card
+                        </button>
+                        <button class="payment-btn" data-method="bank-transfer">
+                            <img src="bank-transfer.png" alt="Bank Transfer"> Bank Transfer
+                        </button>
+                        <button class="payment-btn" data-method="e-money">
+                            <img src="emoney.png" alt="e-Money"> e-Money
+                        </button>
+                    </div>
+                    <select id="card-number" style="width: 100%;">
+                        <!-- Options will be populated by JavaScript -->
+                    </select>
+                </div>
+            </section>
+            <section class="summary section-box">
+                <h2>Order Summary</h2>
+                <p>
+                    <span>Product Subtotal:</span>
+                    <span>Rp860.000,00</span>
+                </p>
+                <p>
+                    <span>Delivery Fee:</span>
+                    <span>Rp8.000,00</span>
+                </p>
+                <p>
+                    <span>Admin Fee:</span>
+                    <span>Rp2.000,00</span>
+                </p>
+                <h3>
+                    <span>Order Total:</span>
+                    <span>Rp870.000,00</span>
+                </h3>
+                <button class="pay-btn">Pay</button>
+            </section>
+
+        </div>
+    </main>
+
+    <script src="trans-scripts.js"></script>
+</body>
+
+</html>

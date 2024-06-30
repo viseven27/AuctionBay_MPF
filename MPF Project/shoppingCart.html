@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AuctionBay</title>
+    <link rel="stylesheet" href="Style/Cart.css">
+    <script src="https://kit.fontawesome.com/67c66657c7.js"></script>
+    <script src="https://code.iconify.design/3/3.1.1/iconify.min.js"></script>
+    <title>Shopping Cart</title>
+</head>
+
+<body>
+    <div id ="box1"></div>
+    <div id="rectangle-2"></div>
+
+    <header class="header">
+        <div class="logo"><a href="Home.html">
+                <img class="logo" src="assets/Img/LogoAuctionBay.png" alt="Logo">
+            </a>
+        </div>
+        <nav classes ="navbar">
+            <div class ="search_box">
+                <input type="search" placeholder="Search for bid">
+                <span class="fa fa-search"></span>
+            </div>
+            <ol>
+                <li>
+                    <a href="shoppingCart.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 16 16">
+                            <path fill="Black" d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607L1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l1.313 7h8.17l1.313-7zM5 12a2 2 0 1 0 0 4a2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4a2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2a1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2a1 1 0 0 1 0-2" />
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a href="Login.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <g fill="none" stroke="Black" stroke-width="2">
+                                <path stroke-linejoin="round" d="M4 18a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z" />
+                                <circle cx="12" cy="7" r="3" />
+                            </g>
+                        </svg>
+                    </a>
+                </li>
+
+            </ol>
+        </nav>
+    </header>
+    <div class="Titlecart"><h1>Shopping Cart</h1></div>
+    <div class="category-container">
+        <div class="check"><input type="checkbox" id="item1"></div>
+        <div class="categoryTxt">
+            
+
+            <table cellspacing="0" class="table-head">
+                <tr>
+                    <th width = "320" class="Product">Product</th>
+                    <th width="230">Price</th>
+                    <th width="170">Quantity</th>
+                    <th width="170">Price Total</th>
+                    <th width="300">Payment Deadline</th>
+                </tr>
+            </table>
+                
+        </div>
+    </div>
+    <div class="product-container">
+        <div class="check"><input type="checkbox" id="item2"></div>
+        <div class="product-img"><img src="Assets/Img/Mask group2.jpg" alt="" srcset=""></div>
+        <div class="product-name">
+            <div class="title">Majalah Drift Tengoku</div>
+            <div class="serial">#16278182169420</div>
+        </div>
+        <div class="price">Rp. 330.000,00</div>
+        <div class="qty">2</div>
+        <div class="totalprice">Rp. 660.000,00</div>
+        <div class="deadline">May 28, 2024 19.00</div>
+    </div>
+    <div class="line"></div>
+    <div class="product-container2">
+        <div class="check"><input type="checkbox" id="item2"></div>
+        <div class="product-img"><img src="Assets/Img/Mask group.jpg" alt="" srcset=""></div>
+        <div class="product-name">
+            <div class="title">Novel Grapes of Wrath</div>
+            <div class="serial">#16278182169420</div>
+        </div>
+        <div class="price">Rp. 200.000,00</div>
+        <div class="qty">1</div>
+        <div class="totalprice">Rp. 200.000,00</div>
+        <div class="deadline">May 29, 2024 19.00</div>
+    </div>
+
+    <div class="bottomCheckout">
+        <div class="deadline2">Payment Deadline in</div>
+        <div class="time">32 Minutes 19 second</div>
+        <div class="subtotal">Subtotal</div>
+        <div class="subtotalCount">Rp860.000,00</div>
+        <a href="transaction.html">
+            <div class="checkoutBtn">Checkout(3)</div>
+        </a>
+        
+        </div>   
+</body>
+</html>

@@ -1,0 +1,555 @@
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+
+
+#box1{
+    width: 100%;
+    height: 150%;
+    left: 0px;
+
+    position: absolute;
+    background-color:#EBEBEB;
+    z-index: -1;
+}
+
+
+
+@font-face {
+    font-family: "Lato";
+    src: url('698242188-Lato-Bla.eot');
+    src: url('698242188-Lato-Bla.eot?#iefix') format('embedded-opentype'),
+    url('698242188-Lato-Bla.svg#Lato Black') format('svg'),
+    url('698242188-Lato-Bla.woff') format('woff'),
+    url('698242188-Lato-Bla.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.Titlecart{
+    font-size: 13px;
+    font-family: 'Lato', sans-serif;
+    font-weight: bolder;
+    margin-left: 40px;
+    margin-top: 20px;
+
+}
+
+header {
+    display: flex;
+    width: 100%;
+    background-color: white;
+    position: relative;
+    justify-content: space-between;
+    padding: 15px 30px;
+}
+
+.logo img {
+    padding: 6px;
+    padding-top: 10px;
+    padding-left: 10px;
+    width: 150px;
+    cursor: pointer;
+}
+
+header .search_box {
+    border-radius: 5px;
+    border: 1px solid hsl(0, 0%, 36%);
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    height: 32px;
+    flex-grow: 1; 
+    margin-right: 20px; 
+}
+
+nav .search_box input {
+    font-family: 'Lato', sans-serif;
+    border: none;
+    outline: none;
+    background-color: white;
+    height: 100%;
+    font-size: 10px;
+    width: 750px; 
+}
+
+nav .search_box input::placeholder {
+    font-family: 'Lato', sans-serif;
+    font-size: 10px;
+    color: #8D8C8C;
+}
+
+nav ol {
+    color: black;
+    display: flex;
+    align-items: center; /* Align items vertically in the center */
+    margin: 0;
+    padding: 5px;
+}
+
+nav ol li {
+    margin-left: 20px; /* Add spacing between the list items */
+    padding: 5px;
+}
+
+/* Add this to ensure the nav ol stays to the right of the search box */
+header nav {
+    display: flex;
+    align-items: center;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* New styles for product detail box */
+.product-detail-box {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align items to the top */
+    background-color: white;
+    width: 68%;
+    margin: 50px auto;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    min-height: 100vh;
+    height: 1250px;
+}
+
+/* Additional style to stretch beyond viewport height if there's more content */
+body::after {
+    content: "";
+    display: block;
+    height: 100px; /* Adjust this value if needed to ensure scrolling */
+}
+
+.image-section {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    margin-top: 20px;
+}
+
+.main-image {
+    width: 500px;
+    height: 500px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    margin-left: 27px;
+}
+
+.thumbnail-images {
+    display: flex;
+    gap: 10px;
+    margin-left: 27px;
+}
+
+.thumbnail {
+    width: 80px;
+    height: 80px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+}
+
+.description-section {
+    margin-left: 65px;
+    margin-right: 25px;
+}
+
+.product-name {
+    font-family: 'Lato', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    margin-top: 20px;
+}
+
+.current-bid-header {
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    color: #474747;
+    margin-top: 25px;
+}
+
+.product-description {
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    color: #000000;
+    margin-top: 20px; /* Ensure space between product name and description */
+    margin-bottom: 30px;
+}
+
+.products-sold {
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    color: #7e7e7e;
+    margin-top: 5px;
+}
+
+.current-bid {
+    font-family: 'Lato', sans-serif;
+    font-size: 50px;
+    font-weight: bold;
+    color: #000000;
+    margin-top: 5px;
+}
+
+.currency-bid {
+    font-family: 'Lato', sans-serif;
+    font-size: 25px;
+    font-weight: 500;
+    color: #000000;
+    font-weight: normal;
+    margin-right: 5px;
+}
+
+.buyout-price-header {
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    color: #474747;
+    margin-top: 25px;
+}
+
+.buyout-price {
+    font-family: 'Lato', sans-serif;
+    font-size: 40px;
+    color: #585858;
+    margin-top: 5px;
+}
+
+.currency-buyout {
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    color: #646464;
+    font-weight: normal;
+    margin-right: 5px;
+}
+
+.bidders-section img {
+    width: 20px; /* Adjust size as needed */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 0px;
+    margin-top: 20px;
+}
+
+.bidders-label {
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    color: #474747;
+    margin-right: 10px;
+}
+
+.bidders-count {
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+    color: #7e7e7e;
+}
+
+.grey-strip {
+    height: 3px;
+    width: 100%; /* Adjust width to cover the entire width of the product detail box */
+    background-color: #EBEBEB;
+    margin-left: -0px; /* Offset to cover the padding */
+    margin-right: 20px; /* Offset to cover the padding */
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+.timer {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.bidding-end-label {
+    margin-top: 42px;
+    margin-right: 20px;
+    align-content: left;
+    font-family: 'Lato', sans-serif;
+    color: #000;
+    font-weight: bold;
+
+}
+
+.flip-clock {
+    display: flex;
+    justify-content: center;
+}
+
+.flip {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 10px;
+}
+
+.flip .hours,
+.flip .minutes,
+.flip .seconds {
+    font-family: 'Lato', sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #ff0000;
+    border-radius: 10px;
+    width: 65px;
+    height: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.flip .label {
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    color: #555;
+    text-transform: uppercase;
+    margin-top: 5px;
+}
+
+.condition {
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.condition-label {
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+    color: #7e7e7e;
+    margin-bottom: 10px;
+    font-weight: normal;
+}
+
+.category {
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.category-label {
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+    color: #7e7e7e;
+    margin-bottom: 10px;
+    font-weight: normal;
+}
+
+.stocks {
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.stocks-label {
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+    color: #7e7e7e;
+    margin-bottom: 10px;
+    font-weight: normal;
+}
+
+.description-label {
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+    color: #7e7e7e;
+    margin-top: 35px;
+}
+
+.profile-section {
+    display: flex;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 17px;
+}
+
+.profile-pic {
+    width: 90px;
+    height: 90px;
+    background-color: #eee;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.seller-info {
+    flex: 1;
+}
+
+.seller-name {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-family: 'Lato', sans-serif;
+}
+
+.trusted-level {
+    font-size: 16px;
+    margin-bottom: 5px;
+    font-family: 'Lato', sans-serif;
+    color: #7e7e7e;
+}
+
+.seller-rating {
+    font-size: 16px;
+    font-family: 'Lato', sans-serif;
+    color: #7e7e7e;
+}
+
+.follow-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Lato', sans-serif;
+    padding-right: 20px;
+}
+
+.follow-button button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #ffffff;
+    color: #CB923C;
+    border: 2px;
+    border-style: solid;
+    border-color: #CB923C;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.next-bid-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.next-bid-label {
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    color: #666666;
+}
+
+.next-bid-amount {
+    font-family: 'Lato', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    color: #666666;
+}
+
+.currency-next-bid {
+    font-size: 18px;
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    color: #666666;
+}
+
+.my-bid-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 10px;
+}
+
+.my-bid-label {
+    font-family: 'Lato', sans-serif;
+    font-size: 28px;
+    font-weight: bold;
+    color: #000000;
+}
+
+.my-bid-amount {
+    font-family: 'Lato', sans-serif;
+    font-size: 45px;
+    font-weight: bold;
+    color: #000000;
+    border: 2px;
+    border-radius: 10px;
+    border-color: #000;
+    border-style: solid;
+    padding-right: 5px;
+    padding-left: 50px;
+}
+
+.currency-my-bid {
+    font-size: 22px;
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    color: #000000;
+}
+
+.bid-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Lato', sans-serif;
+    padding-bottom: 10px;
+    padding-top: 20px;
+}
+
+.bid-button button {
+    padding: 10px 20px;
+    font-size: 20px;
+    background-color: #CB923C;
+    color: #ffffff;
+    border: 1px;
+    border-style: solid;
+    border-color: #CB923C;
+    border-radius: 10px;
+    cursor: pointer;;
+    width: 100%; /* Make the button take up 100% of the width */
+    height: 60px;
+}
+
+.buy-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Lato', sans-serif;
+}
+
+.buy-button button {
+    padding: 10px 20px;
+    font-size: 20px;
+    background-color: #ffffff;
+    color: #CB923C;
+    border: 2px;
+    border-style: solid;
+    border-color: #CB923C;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 100%; /* Make the button take up 100% of the width */
+    height: 60px;
+}
+
+.thumbnail-btn.chosen {
+    border: 2px solid #00bfff; /* Light blue border */
+    border-radius: 12px;
+}
+.thumbnail-btn {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    width: 70px;
+    height: auto;
+}

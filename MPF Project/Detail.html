@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AuctionBay</title>
+    <link rel="stylesheet" href="Detail.css">
+    <script src="https://kit.fontawesome.com/67c66657c7.js"></script>
+    <script src="https://code.iconify.design/3/3.1.1/iconify.min.js"></script>
+    <script>
+        function countdown(endTime) {
+            var deadline = new Date(endTime).getTime();
+
+            var x = setInterval(function () {
+                var now = new Date().getTime();
+                var distance = deadline - now;
+
+                var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                document.querySelector('.hours').textContent = hours < 10 ? '0' + hours : hours;
+                document.querySelector('.minutes').textContent = minutes < 10 ? '0' + minutes : minutes;
+                document.querySelector('.seconds').textContent = seconds < 10 ? '0' + seconds : seconds;
+
+                if (distance < 0) {
+                    clearInterval(x);
+                    document.querySelector('.hours').textContent = '00';
+                    document.querySelector('.minutes').textContent = '00';
+                    document.querySelector('.seconds').textContent = '00';
+                }
+            }, 1000);
+        }
+
+        // Set the deadline for the countdown (replace with your own deadline)
+        countdown('2024-06-16T23:00:00');
+
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Get all thumbnail buttons
+            const thumbnailButtons = document.querySelectorAll('.thumbnail-btn');
+            // Get the main image
+            const mainImage = document.querySelector('.main-image img');
+
+            // Set the leftmost thumbnail as chosen by default
+            thumbnailButtons[0].classList.add('chosen');
+
+            // Add click event listener to each thumbnail button
+            thumbnailButtons.forEach(function (button) {
+                button.addEventListener('click', function () {
+                    // Remove 'chosen' class from all thumbnail buttons
+                    thumbnailButtons.forEach(function (btn) {
+                        btn.classList.remove('chosen');
+                    });
+                    // Add 'chosen' class to the clicked thumbnail button
+                    this.classList.add('chosen');
+                    // Change the main image source to the clicked thumbnail image source
+                    mainImage.src = this.querySelector('.thumbnail-img').src;
+                });
+            });
+        });
+    </script>
+    <title>Item Detail</title>
+</head>
+
+<body>
+    <div id="box1"></div>
+    <div id="rectangle-2"></div>
+
+    <header class="header">
+        <div class="logo"><a href="Home.html">
+                <img class="logo" src="assets/Img/LogoAuctionBay.png" alt="Logo">
+            </a>
+        </div>
+        <nav class="navbar">
+            <div class="search_box">
+                <input type="search" placeholder="Search for bid">
+                <span class="fa fa-search"></span>
+            </div>
+            <ol>
+                <!-- <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 16 16">
+                        <path fill="currentColor"
+                            d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2M8 1.918l-.797.161A4 4 0 0 0 4 6c0 .628-.134 2.197-.459 3.742c-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4 4 0 0 0-3.203-3.92zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5 5 0 0 1 13 6c0 .88.32 4.2 1.22 6" />
+                    </svg>
+                </li>
+                <li>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path fill="currentColor"
+                            d="M7 9V7h14v2zm0 4v-2h14v2zm0 4v-2h14v2zM4 9q-.425 0-.712-.288T3 8t.288-.712T4 7t.713.288T5 8t-.288.713T4 9m0 4q-.425 0-.712-.288T3 12t.288-.712T4 11t.713.288T5 12t-.288.713T4 13m0 4q-.425 0-.712-.288T3 16t.288-.712T4 15t.713.288T5 16t-.288.713T4 17" />
+                    </svg>
+                </li> -->
+
+                <li>
+                    <a href="shoppingCart.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 16 16">
+                            <path fill="Black"
+                                d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607L1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l1.313 7h8.17l1.313-7zM5 12a2 2 0 1 0 0 4a2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4a2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2a1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2a1 1 0 0 1 0-2" />
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a href="Login.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <g fill="none" stroke="Black" stroke-width="2">
+                                <path stroke-linejoin="round"
+                                    d="M4 18a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z" />
+                                <circle cx="12" cy="7" r="3" />
+                            </g>
+                        </svg>
+                    </a>
+                </li>
+
+            </ol>
+        </nav>
+    </header>
+
+    <!-- New product detail box section -->
+    <div class="product-detail-box">
+        <div class="image-section">
+            <div class="main-image">
+                <img src="assets\Img\drift_tengoku_main.webp" alt="Main Image"
+                    style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                <button></button>
+            </div>
+            <div class="thumbnail-images">
+                <button class="thumbnail-btn chosen">
+                    <img src="assets\Img\drift_tengoku_main.webp" alt="Main Image" data-index="0" class="thumbnail-img"
+                        style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                </button>
+                <button class="thumbnail-btn">
+                    <img src="assets\Img\drift_tengoku_thumb1.jpg" alt="Thumbnail Image 1" data-index="1"
+                        class="thumbnail-img"
+                        style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                </button>
+                <button class="thumbnail-btn">
+                    <img src="assets\Img\drift_tengoku_thumb2.jpg" alt="Thumbnail Image 2" data-index="2"
+                        class="thumbnail-img"
+                        style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                </button>
+            </div>
+        </div>
+        <div class="description-section">
+            <div class="product-name">Majalah impor DRIFT TENGOKU FEBRUARY 2019</div>
+            <div class="products-sold">sold = 0 | no ratings</div>
+            <div class="current-bid-header">Curent bid</div>
+            <div class="current-bid">
+                <span class="currency-bid">Rp</span>275,000
+            </div>
+            <div class="buyout-price-header">Buyout price</div>
+            <div class="buyout-price">
+                <span class="currency-buyout">Rp</span>350,000
+            </div>
+            <div class="bidders-section">
+                <img src="Assets/Img/bidders.png" alt="Bidders Icon">
+                <span class="bidders-count">6</span>
+                <span class="bidders-label">Bidders</span>
+            </div>
+            <div class="grey-strip"></div>
+            <div class="bidding-end-section">
+                <div class="timer">
+                    <div class="bidding-end-label">Bidding ends in:</div>
+                    <div class="flip-clock">
+                        <div class="flip">
+                            <div class="hours"></div>
+                            <div class="label">Hours</div>
+                        </div>
+                        <div class="flip">
+                            <div class="minutes"></div>
+                            <div class="label">Minutes</div>
+                        </div>
+                        <div class="flip">
+                            <div class="seconds"></div>
+                            <div class="label">Seconds</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="grey-strip"></div>
+            <div class="condition">
+                <span class="condition-label">Condition: </span>New
+            </div>
+            <div class="category">
+                <span class="category-label">Category: </span>Books & Magazines
+            </div>
+            <div class="stocks">
+                <span class="stocks-label">Stocks: </span>1
+            </div>
+            <div class="description-label">Description</div>
+            <div class="product-description">
+                Majalah DRIFT TENGOKU impor Jepang, edisi februari 2019. Kondisi baru, belum pernah dibuka.
+            </div>
+            <div class="grey-strip">
+                <div class="profile-section">
+                    <div class="profile-pic">
+                        <img src="Assets/Img/no_good.jpg" alt="profile-pic"
+                            style="width: 100%; height: 100%; object-fit: cover; border-radius: 110px;">
+                    </div>
+                    <div class="seller-info">
+                        <div class="seller-name">NO GOOD Imports</div>
+                        <div class="trusted-level">Trusted seller</div>
+                        <div class="seller-rating">Average rating: 4.8</div>
+                    </div>
+                    <div class="follow-button">
+                        <button>Follow</button>
+                    </div>
+                </div>
+                <div class="grey-strip"></div>
+                <div class="next-bid-section">
+                    <div class="next-bid-label">Next bid:</div>
+                    <div class="next-bid-amount">
+                        <span class="currency-next-bid">Rp </span>280,000
+                    </div>
+                </div>
+                <div class="my-bid-section">
+                    <div class="my-bid-label">My bid:</div>
+                    <div class="my-bid-amount">
+                        <span class="currency-my-bid">Rp </span>300,000
+                    </div>
+                </div>
+                <div class="bid-button">
+                    <button>Bid for (Rp300.000)</button>
+                </div>
+                <div class="buy-button">
+                    <button onclick="handleBuyNow()">Buy now (Rp350.000)</button>
+                </div>
+            </div>
+        </div>
+</body>
+<script>
+    function handleBuyNow() {
+        window.location.href = 'transaction.html';
+    }
+</script>
+
+</html>

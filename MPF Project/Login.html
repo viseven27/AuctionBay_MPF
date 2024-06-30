@@ -1,0 +1,329 @@
+<style>
+  .container {
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(https://cdn.builder.io/api/v1/image/assets%2Ffb64acecb7014d04ac0f55f88e7916d3%2F825407b46e89455c8bdec87f14e2c505);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    box-shadow: 0 0 0 1000px rgba(255, 255, 255, 0.6) inset;
+    padding: 75px 60px;
+  }
+
+  @media (max-width: 991px) {
+    .container {
+      padding: 0 20px;
+    }
+  }
+
+  .section-wrapper {
+    display: flex;
+    margin-top: 59px;
+    width: 763px;
+    max-width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @media (max-width: 991px) {
+    .section-wrapper {
+      margin-top: 40px;
+    }
+  }
+
+  .form-section {
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.5);
+    background-color: #fff;
+    align-self: stretch;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 169%;
+    justify-content: center;
+    padding: 70px 60px;
+  }
+
+  @media (max-width: 991px) {
+    .form-section {
+      max-width: 100%;
+      padding: 0 20px;
+    }
+  }
+
+  .login-form {
+    display: flex;
+    width: 500px;
+    max-width: 100%;
+    flex-direction: column;
+  }
+
+  .title {
+    color: #000;
+    align-self: center;
+    font: 35px/40.5px Allerta Stencil, -apple-system, Roboto, Helvetica, sans-serif;
+  }
+
+  .link-wrapper {
+    border-radius: 8px;
+    background-color: #efefef;
+    display: flex;
+    margin-top: 64px;
+    gap: 20px;
+    font-size: 20px;
+    color: #000;
+    line-height: 130%;
+    padding: 5px 0;
+  }
+
+  @media (max-width: 991px) {
+    .link-wrapper {
+      max-width: 100%;
+      flex-wrap: wrap;
+      margin-top: 40px;
+    }
+  }
+
+  .login-link,
+  .register-link {
+    padding: 16px 60px;
+    font-family: Domine, sans-serif;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  @media (max-width: 991px) {
+    .login-link {
+      max-width: 100%;
+    }
+  }
+
+  .subtitle {
+    color: #707070;
+    font-family: Domine, sans-serif;
+    margin-top: 90px;
+  }
+
+  @media (max-width: 991px) {
+    .subtitle {
+      max-width: 100%;
+      margin-top: 40px;
+    }
+  }
+
+  .divider {
+    border-color: rgba(216, 216, 216, 1);
+    border-style: solid;
+    border-width: 1px;
+    background-color: #d8d8d8;
+    margin-top: 19px;
+    height: 1px;
+  }
+
+  @media (max-width: 991px) {
+    .divider {
+      max-width: 100%;
+    }
+  }
+
+  .input-wrapper {
+    display: flex;
+    margin-top: 47px;
+    gap: 20px;
+    color: #707070;
+    white-space: nowrap;
+    justify-content: space-between;
+  }
+
+  @media (max-width: 991px) {
+    .input-wrapper {
+      max-width: 100%;
+      flex-wrap: wrap;
+      margin-top: 40px;
+      white-space: initial;
+    }
+  }
+
+  .password-input {
+    font-family: Domine, sans-serif;
+  }
+
+  .icon {
+    aspect-ratio: 1.47;
+    object-fit: auto;
+    object-position: center;
+    width: 25px;
+    fill: #8d8c8c;
+  }
+
+  .forgot-password {
+    color: #a18a68;
+    font-family: Domine, sans-serif;
+    margin-top: 37px;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  @media (max-width: 991px) {
+    .forgot-password {
+      max-width: 100%;
+    }
+  }
+
+  .remember-me {
+    display: flex;
+    align-self: start;
+    margin-top: 36px;
+    gap: 8px;
+    color: #000;
+  }
+
+  .checkbox-icon {
+    aspect-ratio: 1;
+    object-fit: auto;
+    object-position: center;
+    width: 16px;
+  }
+
+  .remember-me-text {
+    font-family: Domine, sans-serif;
+  }
+
+  .login-button {
+    font-family: Domine, sans-serif;
+    border-radius: 10px;
+    border-color: rgba(255, 255, 255, 1);
+    border-style: solid;
+    border-width: 1px;
+    background-color: #000;
+    margin-top: 50px;
+    align-items: center;
+    color: #fff;
+    font-weight: 700;
+    justify-content: center;
+    padding: 21px 60px;
+  }
+
+  @media (max-width: 991px) {
+    .login-button {
+      max-width: 100%;
+      margin-top: 40px;
+      padding: 0 20px;
+    }
+  }
+
+  .image-container {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+    aspect-ratio: 8.23;
+    margin-top: 57px;
+    width: 181px;
+    max-width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  @media (max-width: 991px) {
+    .image-container {
+      margin-top: 40px;
+    }
+  }
+
+  .image-bg {
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .image {
+    aspect-ratio: 8.33;
+    object-fit: auto;
+    object-position: center;
+    width: 100%;
+  }
+
+  .footer {
+    color: #000;
+    margin-top: 60px;
+    font: 400 16px/169% Domine, sans-serif;
+  }
+
+  @media (max-width: 991px) {
+    .footer {
+      margin-top: 40px;
+    }
+  }
+</style>
+<div class="container">
+  <section class="section-wrapper">
+    <section class="form-section">
+      <form class="login-form" onsubmit="handleLogin(event)">
+        <h1 class="title">
+          <span style="color: #a18a68;">Auction</span> Bay
+        </h1>
+        <nav class="link-wrapper">
+          <button class="login-link" type="button" onclick="handleLogin()">Log in</button>
+          <button class="register-link" type="button" onclick="handleRegister()">Register</button>
+        </nav>
+        <label class="subtitle" for="emailInput">Email</label>
+        <div class="input-wrapper">
+          <input class="password-input" type="email" id="emailInput" placeholder="Enter your email" aria-label="Email"
+            required />
+        </div>
+        <div class="divider"></div>
+        <label class="subtitle" for="passwordInput">Password</label>
+        <div class="input-wrapper">
+          <input class="password-input" type="password" id="passwordInput" placeholder="*************"
+            aria-label="Password" required />
+        </div>
+        <div class="divider"></div>
+        <button class="forgot-password" type="button" onclick="handleForgotPassword()">Forgot Password?</button>
+        <div class="remember-me">
+          <input id="rememberInput" type="checkbox" class="visually-hidden" />
+          <label for="rememberInput" class="remember-me-text">Remember Me</label>
+        </div>
+        <button type="submit" class="login-button">LOG IN</button>
+      </form>
+    </section>
+    <section class="image-container">
+      <img loading="lazy"
+        src="https://cdn.builder.io/api/v1/image/assets/TEMP/d4e70337b430fd8e99085734fc7c735f7f1d9c5299da9f1c4ae46767597e21e4?apiKey=fb64acecb7014d04ac0f55f88e7916d3&"
+        class="image-bg" alt="" />
+      <img loading="lazy"
+        src="https://cdn.builder.io/api/v1/image/assets/TEMP/d4e70337b430fd8e99085734fc7c735f7f1d9c5299da9f1c4ae46767597e21e4?apiKey=fb64acecb7014d04ac0f55f88e7916d3&"
+        class="image" alt="" />
+    </section>
+    <footer class="footer">
+      Copyright © 2024 AuctionBay. All rights reserved.
+    </footer>
+  </section>
+</div>
+<script>
+  function handleLogin(event) {
+    event.preventDefault();
+    const email = document.getElementById('emailInput').value;
+    const password = document.getElementById('passwordInput').value;
+    alert('Email: ' + email + '\nPassword: ' + password);
+    alert('Selamat datang!');
+    window.location.href = 'Home.html';
+  }
+
+
+  function handleRegister() {
+    window.location.href = 'register.html';
+  }
+
+  function handleForgotPassword() {
+    alert('Forgot Password button clicked');
+  }
+</script>
